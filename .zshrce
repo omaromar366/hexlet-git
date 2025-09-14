@@ -1,0 +1,7 @@
+export PATH="$HOME/Library/Python/3.8/bin:$PATH"
+autoload -Uz vcs_info
+precmd() { vcs_info }
+setopt prompt_subst
+PROMPT='%~ ${vcs_info_msg_0_}%# '
+zstyle ':vcs_info:git:*' formats '%b'
+zstyle ':vcs_info:git:*' actionformats '%b|%a'
